@@ -1,5 +1,2 @@
 #!/bin/bash
-cd 
-cd ..
-cd tmp
-mv betty ../alx-system_engineering-devops/0x00-shell_basics/tmp/my_first_directory
+cd tmp mv betty my_first_directory
