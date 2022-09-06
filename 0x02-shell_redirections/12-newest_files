@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -exec stat -c '%X %n' {} \; | sort -nr | awk 'NR==1,NR==10 {print $2}' | awk '{ print substr( $0, 3 ) }'
+ls -l | awk '{ print $9 }' | sort -nr | awk 'NR==1,NR==10'
