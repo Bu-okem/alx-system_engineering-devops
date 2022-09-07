@@ -1,1 +1,1 @@
-## Shell Variables Expansions READEME
+## Shell Variables Expansions README
