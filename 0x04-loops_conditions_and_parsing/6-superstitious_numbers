@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#This script displays 1 to 20 but  after 4, displays "bad luck from China", after 9, "bad luck from Japan" and after 17, displays "bad luck from Italy"
+
+count=1
+while ((count<=20));
+do
+	if ((count==4));
+	then
+		echo count
+		echo "bad luck from China"
+	elif ((count==9));
+	then
+		echo count
+		echo "bad luck from Japan"
+	elif ((count==17));
+	then
+		echo count
+		echo "bad luck from Italy"
+	else
+		echo count
+	fi
+	((count+=1))
+done
