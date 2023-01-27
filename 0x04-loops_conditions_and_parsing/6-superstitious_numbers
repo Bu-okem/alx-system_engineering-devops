@@ -4,20 +4,11 @@
 count=1
 while ((count<=20));
 do
-	if ((count==4));
-	then
-		echo count
-		echo "bad luck from China"
-	elif ((count==9));
-	then
-		echo count
-		echo "bad luck from Japan"
-	elif ((count==17));
-	then
-		echo count
-		echo "bad luck from Italy"
-	else
-		echo count
-	fi
+	echo $count
+	case $count in
+		4) echo "bad luck from China";;
+		9) echo "bad luck from Japan";;
+		17) echo "bad luck form Italy";;
+	esac
 	((count+=1))
 done
