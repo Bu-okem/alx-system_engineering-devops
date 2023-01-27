@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Displays the content directory in a list format after character '-'
+
+for file in *; do
+	echo "$file" | cut -f2 -d'-'
+done
