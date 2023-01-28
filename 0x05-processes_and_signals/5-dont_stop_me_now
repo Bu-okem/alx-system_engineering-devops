@@ -2,4 +2,4 @@
 # Kills a running process
 
 running_pid = $(pgrep -f "./4-to_infinity")
-kill "$(running_pid)
+kill "$running_pid
