@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Kills a running process
+
+running_pid = $(pgrep -a "bash" | grep "4-to_infinity" | cut -d' ' -f1)
+kill "$(running_pid)
