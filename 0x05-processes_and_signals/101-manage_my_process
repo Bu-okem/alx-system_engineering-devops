@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Manages manage_my_process
+
+case $1 in
+	"start")
+		./manage_my_process & > /var/run/my_process.pid
+		echo "manage_my_process started";;
+	"stop")
+		running_id=$(cat /var/run/my_process.pid)
+		kill "$running_id"
+		rm /var/run/my_process.pid
+		echo "manage_my_process stopped";;
+	"restart")
+		running_id=$(cat /var/run/my_process.pid)
+		kill "$running_id"
+		rm /var/run/my_process.pid
+		./manage_my_process & > /var/run/my_process.pid
+		echo "manage_my_process restarted";;
+	*)
+		echo "Usage: manage_my_process {start|stop|restart}";;
+esac
