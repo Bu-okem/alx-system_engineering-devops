@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Displays "To infinity and beyond indefinitely" and displays "I am invincible" when it receives a SIGTERM signal
 
-trap "echo 'I am invincible!!!'; exit" SIGTERM
+trap "echo 'I am invincible!!!'" SIGTERM
 
 while true;
 do
