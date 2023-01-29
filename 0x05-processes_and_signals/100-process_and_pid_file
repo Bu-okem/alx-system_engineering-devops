@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# creates a file containg it's pid and destroys it when it receives a SIGQUIT or SIGTERM signal
+
+echo $BASHPID > /var/run/myscript.pid
+trap "echo 'I hate the kill command'; rm /var/run/myscript.pid; exit 0;" SIGTERM
+trap "echo 'Y U no love me?!'" SIGINT
+trap 'rm /var/run/myscript.pid; exit 0;' SIGQUIT
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
