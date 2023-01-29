@@ -3,7 +3,8 @@
 
 case $1 in
 	"start")
-		./manage_my_process & > /var/run/my_process.pid
+		./manage_my_process &
+		$BASHPID > /var/run/my_process.pid
 		echo "manage_my_process started";;
 	"stop")
 		running_id=$(cat /var/run/my_process.pid)
@@ -14,7 +15,8 @@ case $1 in
 		running_id=$(cat /var/run/my_process.pid)
 		kill -s SIGSTOP "$running_id"
 		rm /var/run/my_process.pid
-		./manage_my_process & > /var/run/my_process.pid
+		./manage_my_process &
+	       	$BASHPID > /var/run/my_process.pid
 		echo "manage_my_process restarted";;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}";;
