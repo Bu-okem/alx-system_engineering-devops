@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+
 '''
 A Python script that, for a given employee ID,
 returns information about his/her TODO list progress.
 '''
+
 import re
 import requests
 import sys
@@ -29,4 +31,4 @@ if __name__ == '__main__':
                 )
             )
             for todo_done in todos_done:
-                print('\t {}'.format(todo_done.get('title'))
+                print('\t {}'.format(todo_done.get('title')))
